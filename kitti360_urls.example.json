@@ -1,0 +1,8 @@
+{
+  "archives": {
+    "calibration.zip": "/absolute/path/to/official/calibration.zip",
+    "data_poses.zip": "/absolute/path/to/official/data_poses.zip",
+    "data_3d_semantics.zip": "/absolute/path/to/official/data_3d_semantics.zip",
+    "2013_05_28_drive_0000_sync_velodyne.zip": "/absolute/path/to/official/2013_05_28_drive_0000_sync_velodyne.zip"
+  }
+}

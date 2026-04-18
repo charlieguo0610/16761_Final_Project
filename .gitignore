@@ -1,0 +1,15 @@
+# Large raw / extracted KITTI-360 data (not tracked in git)
+KITTI-360/
+*.zip
+urls.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.eggs/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
