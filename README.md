@@ -25,6 +25,26 @@ LiDAR point-cloud scenes for GMM-based occupancy mapping and RRT motion planning
 
 `x y z red green blue semantic instance visible confidence` — world-coordinate frame.
 
+## Git LFS
+
+The 10 processed PLY files (374 MB total) are stored with [Git LFS](https://git-lfs.com/). After cloning, you must pull the actual data:
+
+```bash
+# Install Git LFS (one-time)
+# macOS: brew install git-lfs
+# Ubuntu: sudo apt install git-lfs
+git lfs install
+
+# Clone (LFS pointers are fetched automatically with recent git versions)
+git clone https://github.com/charlieguo0610/16761_Final_Project.git
+cd 16761_Final_Project
+
+# If PLY files show as small pointer files, pull the real data:
+git lfs pull
+```
+
+Without `git lfs install`, the PLY files will be ~130-byte pointer files instead of the actual point clouds.
+
 ## Pipeline
 
 ```
