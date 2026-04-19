@@ -67,6 +67,14 @@ python kitti360_dataset_pipeline.py batch-export \
 
 See `KITTI360_dataset_script_README.txt` for the full workflow.
 
+### GMM
+
+Run 
+```
+python gmm2.py
+```
+to run GMM and visualize the occupancy map. 3D occupancy probability can be loaded from `occupancy_grid.npy`. Can define where to save the results and the initial ply to load from this file above.
+
 ## License
 
 KITTI-360 data is released under **CC BY-NC-SA 3.0** by the Autonomous Vision Group (CVPR 2022). Code in this repo is for academic coursework (CMU 16-761).
