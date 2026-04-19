@@ -71,9 +71,26 @@ See `KITTI360_dataset_script_README.txt` for the full workflow.
 
 Run 
 ```
-python gmm2.py
+python gmm3.py --ply_path PLY_PATH --out_dir OUT_DIR
 ```
-to run GMM and visualize the occupancy map. 3D occupancy probability can be loaded from `occupancy_grid.npy`. Can define where to save the results and the initial ply to load from this file above.
+to run GMM and visualize the occupancy map. 3D occupancy probability can be loaded from `occupancy_grid.npy`. To load from existing gmm model and query occupancy probability at positions in the scene, use code snipet below: 
+
+```
+    # Example re-load + query points
+    q = np.array([
+        [0.0, 0.0, 0.0],
+        [1.0, 2.0, 0.5],
+        [3.0, 1.0, 1.2],
+    ], dtype=np.float64)
+
+    probs = load_model_and_query(
+        "gmm/2013_05_28_drive_0000_sync_0000000002_0000000385_clean/gmm_occupancy_model.pkl",
+         q,
+        lam=10.0,
+        power=1.0,
+    )
+    print("Reloaded model query:", probs)
+```
 
 ## License
 
